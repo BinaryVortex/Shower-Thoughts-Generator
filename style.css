@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('shower.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    animation: zoomBackground 20s ease-in-out infinite;
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 110%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+    box-sizing: border-box;
+    z-index: 10;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Enhance shadow for depth */
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+}
+
+.thought-box {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+button {
+    background-color: #ff007f;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #ff4f9f;
+}
+
+button:active {
+    background-color: #e60073;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.4);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+        width: 95%;
+    }
+
+    .thought-box {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
